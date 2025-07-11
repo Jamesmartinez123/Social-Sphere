@@ -25,23 +25,17 @@
 
   <script>
     function login(event) {
-      event.preventDefault(); // Prevent form submission
-
-      // Get user input
+      event.preventDefault(); 
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
-
-      // Simulate backend validation (replace with actual backend logic)
       if (email === 'example@example.com' && password === 'password') {
         alert('Login successful!');
-        // Redirect to another page or perform further actions
       } else {
         alert('Invalid email or password. Please try again.');
       }
     }
 
     function createAccount() {
-      // Redirect to the registration page (replace with actual URL)
       window.location.href = 'registration.html';
     }
   </script>
