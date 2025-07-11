@@ -21,21 +21,19 @@
 
   <script>
     function createAccount(event) {
-      event.preventDefault(); // Prevent form submission
-
-      // Get user input
+      event.preventDefault(); 
+      
       var name = document.getElementById('name').value;
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
 
-      // Simulate backend registration (replace with actual backend logic)
       console.log('Name:', name);
       console.log('Email:', email);
       console.log('Password:', password);
 
-      alert('Account created successfully!'); // Display a success message
+      alert('Account created successfully!');
 
-      // Redirect to the login page
+      
       window.location.href = 'login.html';
     }
   </script>
