@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Account - SocialSphere</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <form class="signup-form" onsubmit="createAccount(event)">
+      <h1>Create a New Account</h1>
+      <input id="name" type="text" placeholder="Your Name" required>
+      <input id="email" type="email" placeholder="Email Address" required>
+      <input id="password" type="password" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+      <p>By clicking Sign Up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+      <p>Already have an account? <a href="login.html">Log in</a>.</p>
+    </form>
+  </div>
+
+  <script>
+    function createAccount(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get user input
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      // Simulate backend registration (replace with actual backend logic)
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Password:', password);
+
+      alert('Account created successfully!'); // Display a success message
+
+      // Redirect to the login page
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>
