@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocialSphere</title>
+  <link rel="stylesheet" href="mainpcss.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="Mess.html">Messages</a></li>
+        <li><a href="Notification.html">Notifications</a></li>
+        <li><a href="Settings.html">Settings</a></li>
+        <li><a href="Logout_confirmation.html">Log Out</a></li> 
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="news-feed">
+      <h2>News Feed</h2>
+      
+      <div class="post">
+        <div class="user-info">
+          <img src="profile-pic.jpg" alt="Profile Picture">
+          <h3>Jaden</h3>
+        </div>
+        <p>Newest post on SocialSphere</p>
+      </div>
+      <p>Cute Cat</p> <h6>4 seconds ago</h6>
+      <img src="Cathtmlsample.jpg" alt="Cute cat" style="width: 580px; height: 360px;">
+      <div class="like-buttons">
+        <button class="like-button" onclick="incrementLikes()">Like</button>
+        <span id="like-count">0</span>
+      </div>
+
+      
+    </section>
+    <section class="sidebar">
+      <h2>Friends</h2>
+      
+      <ul>
+        <li>Friend 1</li>
+        <li>Friend 2</li>
+        <li>Friend 3</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    // Function to increment likes (example function)
+    function incrementLikes() {
+      var likeCount = document.getElementById('like-count');
+      likeCount.textContent = parseInt(likeCount.textContent) + 1;
+    }
+  </script>
+</body>
+</html>

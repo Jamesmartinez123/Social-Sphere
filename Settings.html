@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="setcss.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Settings</h1>
+    <form id="settingsForm" onsubmit="updateSettings(event)">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br><br>
+      <label for="password">New Password:</label><br>
+      <input type="password" id="password" name="password"><br><br>
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+
+  <script>
+    function updateSettings(event) {
+      event.preventDefault();
+      
+      
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      fetch('update_settings.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name: name, email: email, password: password })
+      })
+      .then(response => response.json())
+      .then(data => {
+        
+        console.log(data);
+        alert('Settings updated successfully!');
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+      });
+    }
+  </script>
+</body>
+</html>

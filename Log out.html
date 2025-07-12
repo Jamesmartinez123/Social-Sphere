@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to SocialSphere!</title>
+  <link rel="stylesheet" href="Logingcss.css">
+</head>
+<body>
+  <div class="container">
+    <form class="login-form" onsubmit="login(event)">
+      <h1>Login to SocialSphere</h1>
+      <input id="email" type="text" placeholder="Email or Phone" required>
+      <input id="password" type="password" placeholder="Password" required>
+      <button type="submit">Log In</button>
+      <div class="separator">
+        <span class="line"></span>
+        <span class="text">or</span>
+        <span class="line"></span>
+      </div>
+      <button class="create-account" onclick="createAccount()">Create New Account</button>
+      <a href="#" class="forgot-password">Forgot Password?</a>
+    </form>
+  </div>
+
+  <script>
+    function login(event) {
+      event.preventDefault();
+
+      
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      
+      if (email === 'example@example.com' && password === 'password') {
+        alert('Login successful!');
+        window.location.href = 'Mainplatfrom.html'; 
+      } else {
+        alert('Invalid email or password. Please try again.');
+      }
+    }
+
+    function createAccount() {
+      
+      window.location.href = 'registration.html';
+    }
+  </script>
+</body>
+</html>

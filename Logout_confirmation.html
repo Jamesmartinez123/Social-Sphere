@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logout Confirmation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Logout Confirmation</h1>
+    <p>Are you sure you want to log out?</p>
+    <div class="buttons">
+      <button onclick="logout()">Log out</button>
+      <button onclick="stay()">Stay</button>
+    </div>
+  </div>
+
+  <script>
+    function logout() {
+      // Redirect to logout script when user clicks "Log out"
+      window.location.href = 'index.html'; // Replace 'logout.php' with your logout script URL
+    }
+
+    function stay() {
+      // Redirect to the home page or any other page when user clicks "Stay"
+      window.location.href = 'Mainplatfrom.html'; // Replace 'home.php' with the desired page URL
+    }
+  </script>
+</body>
+</html>
