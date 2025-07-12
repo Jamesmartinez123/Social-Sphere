@@ -2,27 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Logout Confirmation</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://wallpaperaccess.com/full/340434.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
     }
 
     .top-bar {
-      background-color: #2e7d32;
+      background: linear-gradient(to right, #a8e063, #56ab2f);
       color: white;
       padding: 15px 40px;
       font-size: 22px;
       font-weight: bold;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     .top-bar a {
       color: white;
       text-decoration: none;
+      text-shadow: 1px 1px #000;
     }
 
     .top-bar a:hover {
@@ -32,11 +35,12 @@
     .container {
       max-width: 500px;
       margin: 100px auto;
-      background: white;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
       padding: 40px;
       text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
     h1 {
@@ -45,7 +49,7 @@
     }
 
     p {
-      color: #555;
+      color: #444;
       font-size: 18px;
       margin-bottom: 30px;
     }
@@ -57,18 +61,19 @@
     }
 
     .buttons button {
-      background-color: #2e7d32;
+      background: linear-gradient(to bottom, #56ab2f, #a8e063);
       color: white;
       border: none;
       padding: 10px 20px;
       font-size: 16px;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.2s;
+      font-weight: bold;
+      box-shadow: inset 0 0 5px rgba(255,255,255,0.5), 0 4px 10px rgba(0,0,0,0.2);
     }
 
     .buttons button:hover {
-      background-color: #1b5e20;
+      background: linear-gradient(to bottom, #3c8031, #6dbb1f);
     }
   </style>
 </head>
