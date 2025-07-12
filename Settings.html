@@ -1,30 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Settings</title>
-  <link rel="stylesheet" href="setcss.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings - Social Sphere</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .top-bar {
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 40px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 600px;
+      background: white;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #2e7d32;
+      color: white;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1b5e20;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+
+  <div class="top-bar">Social Sphere</div>
+
   <div class="container">
     <h1>Settings</h1>
     <form id="settingsForm" onsubmit="updateSettings(event)">
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name"><br><br>
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email"><br><br>
-      <label for="password">New Password:</label><br>
-      <input type="password" id="password" name="password"><br><br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="password">New Password:</label>
+      <input type="password" id="password" name="password">
+
       <button type="submit">Save Changes</button>
     </form>
+
+    <a href="Home.html.html" class="back-link">← Back to Home</a>
   </div>
 
   <script>
     function updateSettings(event) {
       event.preventDefault();
-      
-      
+
       var name = document.getElementById('name').value;
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
@@ -38,7 +117,6 @@
       })
       .then(response => response.json())
       .then(data => {
-        
         console.log(data);
         alert('Settings updated successfully!');
       })
@@ -48,5 +126,6 @@
       });
     }
   </script>
+
 </body>
 </html>
