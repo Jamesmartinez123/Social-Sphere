@@ -4,57 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Welcome to SocialSphere!</title>
-  
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Trebuchet MS', 'Segoe UI', Verdana, sans-serif;
       background: url('Bliss.jpg') no-repeat center center fixed;
       background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
     }
 
     .container {
-      max-width: 400px;
-      margin: 100px auto;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(6px);
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      width: 350px;
+      animation: popIn 0.6s ease-out;
+    }
+
+    @keyframes popIn {
+      from {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     h1 {
       text-align: center;
       color: #2e7d32;
       margin-bottom: 25px;
-      text-shadow: 1px 1px #fff;
+      text-shadow: 1px 1px #ffffff;
     }
 
     input {
       width: 100%;
       padding: 12px;
       margin: 10px 0;
-      border-radius: 8px;
       border: 1px solid #ccc;
-      font-size: 16px;
+      border-radius: 10px;
+      font-size: 15px;
+      background: #f1fff3;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
     }
 
     button {
       width: 100%;
       padding: 12px;
-      margin-top: 10px;
-      background: linear-gradient(to right, #56ab2f, #a8e063);
+      margin-top: 12px;
+      background: linear-gradient(to bottom, #56ab2f, #a8e063);
       border: none;
-      border-radius: 10px;
+      border-radius: 14px;
       color: white;
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: inset 0 0 5px rgba(255,255,255,0.5), 0 3px 8px rgba(0,0,0,0.2);
+      box-shadow: inset 0 0 6px rgba(255,255,255,0.5), 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
     }
 
     button:hover {
       background: linear-gradient(to bottom, #3c8031, #6dbb1f);
+      transform: scale(1.02);
     }
 
     .separator {
@@ -64,14 +83,14 @@
     }
 
     .separator .line {
-      flex-grow: 1;
+      flex: 1;
       height: 1px;
       background-color: #ccc;
     }
 
     .separator .text {
       margin: 0 10px;
-      color: #999;
+      color: #888;
       font-weight: bold;
     }
 
@@ -111,17 +130,14 @@
   <script>
     function login(event) {
       event.preventDefault();
-      const email = document.getElementById('email').value.trim();
+      const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
-      const users = JSON.parse(localStorage.getItem('users') || '[]');
-      const user = users.find(u => (u.email === jameskiel120509@gmail.com || u.phone === jameskiel120509@gmail.com) && u.password === password);
-
-      if (user) {
+      if (email === 'jameskiel120509@gmail.com' && password === 'password') {
         alert('Login successful!');
         window.location.href = 'Mainplatfrom.html';
       } else {
-        alert('Invalid email/phone or password. Please try again.');
+        alert('Invalid email or password. Please try again.');
       }
     }
 
@@ -130,7 +146,8 @@
     }
 
     function forgotPassword() {
-      window.location.href = 'forgotpassword.html';
+      alert('Redirecting to password recovery...');
+      window.location.href = 'forgot-password.html';
     }
   </script>
 </body>
