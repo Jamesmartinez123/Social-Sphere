@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social Sphere - Profile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .top-bar {
+      background-color: #1877f2;
+      color: white;
+      padding: 15px 40px;
+      font-size: 22px;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .cover {
+      width: 100%;
+      height: 300px;
+      background: url('https://via.placeholder.com/1200x300/3b5998/ffffff?text=Cover+Photo') no-repeat center;
+      background-size: cover;
+      position: relative;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid white;
+      position: absolute;
+      bottom: -80px;
+      left: 40px;
+      background: url('https://via.placeholder.com/160') no-repeat center;
+      background-size: cover;
+    }
+
+    .profile-info {
+      padding: 100px 40px 20px 40px;
+    }
+
+    .profile-info h1 {
+      margin: 0;
+    }
+
+    .profile-info p {
+      color: #555;
+      margin: 5px 0 15px;
+    }
+
+    .nav-bar {
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      background: white;
+      padding: 10px 40px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: #1877f2;
+      font-weight: bold;
+    }
+
+    .content {
+      padding: 20px 40px;
+    }
+
+    .post {
+      background: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .post h3 {
+      margin-top: 0;
+    }
+
+    .post img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    Social Sphere
+  </div>
+
+  <div class="cover">
+    <div class="profile-pic"></div>
+  </div>
+
+  <div class="profile-info">
+    <h1>John Doe</h1>
+    <p>Fitness Coach | Traveler | Life Enthusiast</p>
+  </div>
+
+  <div class="nav-bar">
+    <a href="#">Posts</a>
+    <a href="#">About</a>
+    <a href="#">Friends</a>
+    <a href="#">Photos</a>
+  </div>
+
+  <div class="content">
+    <div class="post">
+      <h3>John Doe</h3>
+      <p>Had a great workout today! 💪 #NoDaysOff</p>
+      <img src="https://via.placeholder.com/600x300" alt="Workout photo">
+    </div>
+
+    <div class="post">
+      <h3>John Doe</h3>
+      <p>Exploring the mountains 🏔️</p>
+      <img src="https://via.placeholder.com/600x300" alt="Mountain photo">
+    </div>
+  </div>
+
+</body>
+</html>
