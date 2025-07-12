@@ -1,10 +1,97 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome to SocialSphere!</title>
-  <link rel="stylesheet" href="Logingcss.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('Bliss.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .login-form h1 {
+      margin-bottom: 20px;
+      color: #2e7d32;
+      text-shadow: 1px 1px #fff;
+    }
+
+    .login-form input {
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .login-form button {
+      background: linear-gradient(to right, #a8e063, #56ab2f);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .login-form button:hover {
+      background: #2e7d32;
+    }
+
+    .separator {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    .separator .line {
+      flex: 1;
+      height: 1px;
+      background: #ccc;
+    }
+
+    .separator .text {
+      margin: 0 10px;
+      color: #777;
+    }
+
+    .forgot-password {
+      text-align: center;
+      display: block;
+      margin-top: 10px;
+      color: #2e7d32;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -18,7 +105,7 @@
         <span class="text">or</span>
         <span class="line"></span>
       </div>
-      <button class="create-account" onclick="createAccount()">Create New Account</button>
+      <button type="button" class="create-account" onclick="createAccount()">Create New Account</button>
       <a href="#" class="forgot-password">Forgot Password?</a>
     </form>
   </div>
@@ -26,12 +113,8 @@
   <script>
     function login(event) {
       event.preventDefault();
-
-      
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
-
-      
       if (email === 'jameskiel120509@gmail.com' && password === 'password') {
         alert('Login successful!');
         window.location.href = 'Mainplatfrom.html'; 
@@ -41,10 +124,8 @@
     }
 
     function createAccount() {
-      
       window.location.href = 'registration.html';
     }
   </script>
 </body>
 </html>
-
