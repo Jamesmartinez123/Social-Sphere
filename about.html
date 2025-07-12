@@ -4,23 +4,80 @@
   <meta charset="UTF-8">
   <title>About - Social Sphere</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background-color: #f0f2f5; }
-    .top-bar { background-color: #2e7d32; color: white; padding: 15px 40px; font-size: 22px; font-weight: bold; }
-    .nav-bar {
-      background: white; padding: 10px 40px; display: flex; gap: 20px;
-      border-bottom: 1px solid #ccc;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://wallpaperaccess.com/full/340434.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
-    .nav-bar a { text-decoration: none; color: #388e3c; font-weight: bold; }
-    .nav-bar a:hover { color: #1b5e20; }
-    .content { padding: 20px 40px; background: white; margin: 20px; border-radius: 8px; }
-    h2 { margin-top: 0; }
+
+    .top-bar {
+      background: linear-gradient(to right, #a8e063, #56ab2f);
+      color: white;
+      padding: 20px 40px;
+      font-size: 24px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      text-shadow: 1px 1px #000;
+    }
+
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-bar {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 12px 40px;
+      display: flex;
+      gap: 20px;
+      border-bottom: 2px solid #ccc;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    .nav-bar a:hover {
+      color: #1b5e20;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      backdrop-filter: blur(8px);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #2e7d32;
+      text-shadow: 1px 1px #fff;
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    strong {
+      color: #1b5e20;
+    }
   </style>
 </head>
 <body>
-  <div class="top-bar">Social Sphere</div>
+  <div class="top-bar">
+    <a href="Home.html">Social Sphere</a>
+  </div>
 
   <div class="nav-bar">
-    <a href="index.html">Posts</a>
+    <a href="Profile.html">Posts</a>
     <a href="about.html">About</a>
     <a href="friends.html">Friends</a>
     <a href="photos.html">Photos</a>
@@ -31,7 +88,7 @@
     <p><strong>Bio:</strong> i love to make videos</p>
     <p><strong>Location:</strong> Manila, Philippines</p>
     <p><strong>Joined:</strong> July 2025</p>
-    <p><strong>Occupation:</strong> Vlogger </p>
+    <p><strong>Occupation:</strong> Vlogger</p>
     <p><strong>Email:</strong> jameskiel120509@gmail.com</p>
   </div>
 </body>
