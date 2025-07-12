@@ -12,14 +12,33 @@
       background-size: cover;
     }
 
-    .top-bar {
+    header {
       background: linear-gradient(to right, #a8e063, #56ab2f);
-      color: white;
       padding: 20px 40px;
-      font-size: 24px;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      border-bottom: 2px solid #ffffff88;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: white;
       text-shadow: 1px 1px #000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
     }
 
     .container {
@@ -87,9 +106,19 @@
 </head>
 <body>
 
-  <div class="top-bar">
-    <a href="Home.html" style="color: white; text-decoration: none;">Social Sphere</a>
-  </div>
+  <header>
+    <nav>
+      <ul>
+        <li style="font-size: 22px;"><a href="Home.html">SocialSphere</a></li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Profile.html">Profile</a></li>
+        <li><a href="Settings.html">Settings</a></li>
+        <li><a href="Mess.html">Messages</a></li>
+        <li><a href="Notification.html">Notifications</a></li>
+        <li><a href="Logout_confirmation.html">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <div class="container">
     <h1>Settings</h1>
