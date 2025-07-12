@@ -24,6 +24,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      align-items: center;
     }
 
     nav ul li {
@@ -66,7 +67,7 @@
     }
 
     .post {
-      margin-bottom: 15px;
+      margin-bottom: 25px;
     }
 
     .user-info {
@@ -121,6 +122,21 @@
       border-radius: 6px;
       margin-top: 10px;
     }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      margin-right: 30px;
+    }
+
+    .logo a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -128,7 +144,7 @@
   <header>
     <nav>
       <ul>
-        <li><a href="Home.html">SocialSphere</a></li>
+        <li class="logo"><a href="Home.html">SocialSphere</a></li>
         <li><a href="Home.html">Home</a></li>
         <li><a href="Profile.html">Profile</a></li>
         <li><a href="Mess.html">Messages</a></li>
@@ -149,31 +165,30 @@
           <h3>Jackson</h3>
         </div>
         <p>Cute Cat</p>
-        <h6>June 12 2025</h6>
+        <h6>June 12, 2025</h6>
         <img src="Cathtmlsample.jpg" alt="Cute cat" style="width: 100%; max-width: 580px; height: auto;">
         <div class="like-buttons">
-          <button class="like-button" onclick="incrementLikes()">Like</button>
-          <span id="like-count">15</span>
-          
+          <button class="like-button" onclick="incrementLikes('like-count-1')">Like</button>
+          <span id="like-count-1">15</span>
         </div>
       </div>
-    </section>
-    <section>
+
       <div class="post">
         <div class="user-info">
           <img src="profile-pic.jpg" alt="Profile Picture">
           <h3>Jackson</h3>
         </div>
-        <p>might Buy this camera Next time i get the salary lol</p>
+        <p>might Buy this camera Next time I get the salary lol</p>
         <h6>18 minutes ago</h6>
-        <img src="Sony_a7iv.webp" alt="SONYA7IV" style="width: 100%; max-width: 580px; height: auto;">
+        <img src="Sony_a7iv.webp" alt="SONY A7 IV" style="width: 100%; max-width: 580px; height: auto;">
         <div class="like-buttons">
-          <button class="like-button" onclick="incrementLikes()">Like</button>
-          <span id="like-count">5</span>
+          <button class="like-button" onclick="incrementLikes('like-count-2')">Like</button>
+          <span id="like-count-2">5</span>
         </div>
       </div>
+
     </section>
-  
+
     <section class="sidebar">
       <h2>Friends List</h2>
       <ul>
@@ -185,8 +200,8 @@
   </main>
 
   <script>
-    function incrementLikes() {
-      const likeCount = document.getElementById('like-count');
+    function incrementLikes(id) {
+      const likeCount = document.getElementById(id);
       likeCount.textContent = parseInt(likeCount.textContent) + 1;
     }
   </script>
