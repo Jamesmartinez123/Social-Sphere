@@ -18,8 +18,8 @@
         <span class="text">or</span>
         <span class="line"></span>
       </div>
-      <button class="create-account" onclick="createAccount()">Create New Account</button>
-      <a href="#" class="forgot-password">Forgot Password?</a>
+      <button class="create-account" type="button" onclick="createAccount()">Create New Account</button>
+      <a href="#" class="forgot-password" onclick="forgotPassword()">Forgot Password?</a>
     </form>
   </div>
 
@@ -27,22 +27,25 @@
     function login(event) {
       event.preventDefault();
 
-      
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
 
-      
-      if (email === 'example@example.com' && password === 'password') {
+      if (email === 'jameskiel120509@gmail.com' && password === 'password') {
         alert('Login successful!');
-        window.location.href = 'Mainplatfrom.html'; 
+        window.location.href = 'Mainplatfrom.html';
       } else {
         alert('Invalid email or password. Please try again.');
       }
     }
 
     function createAccount() {
-      
       window.location.href = 'registration.html';
+    }
+
+    function forgotPassword() {
+     
+      alert('Redirecting to password recovery...');
+      window.location.href = 'forgot-password.html';
     }
   </script>
 </body>
