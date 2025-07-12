@@ -1,23 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Messages</title>
-  <link rel="stylesheet" href="messcss.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Messages - Social Sphere</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .top-bar {
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 40px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      height: 80vh;
+    }
+
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .message-container {
+      flex-grow: 1;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    .message {
+      padding: 10px 15px;
+      margin: 8px 0;
+      background-color: #e8f5e9;
+      border-radius: 15px;
+      width: fit-content;
+      max-width: 80%;
+    }
+
+    .message.sent {
+      align-self: flex-end;
+      background-color: #c8e6c9;
+    }
+
+    #message-form {
+      display: flex;
+      gap: 10px;
+    }
+
+    #message-input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1b5e20;
+    }
+
+    .back-link {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+
+  <div class="top-bar">Social Sphere</div>
+
   <div class="container">
     <h1>Messages</h1>
+
     <div class="message-container" id="message-container">
-      
+      <!-- Messages will appear here -->
     </div>
+
     <form id="message-form">
-      <input type="text" id="message-input" placeholder="Type your message...">
+      <input type="text" id="message-input" placeholder="Type your message..." required>
       <button type="submit">Send</button>
     </form>
+
+    <div class="back-link">
+      <a href="Home.html">← Back to Home</a>
+    </div>
   </div>
 
-  
+  <script>
+    const messageForm = document.getElementById('message-form');
+    const messageInput = document.getElementById('message-input');
+    const messageContainer = document.getElementById('message-container');
+
+    messageForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const text = messageInput.value.trim();
+      if (text !== '') {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', 'sent');
+        messageDiv.textContent = text;
+        messageContainer.appendChild(messageDiv);
+        messageContainer.scrollTop = messageContainer.scrollHeight;
+        messageInput.value = '';
+      }
+    });
+  </script>
 </body>
 </html>
