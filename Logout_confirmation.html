@@ -8,27 +8,37 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://wallpaperaccess.com/full/340434.jpg') no-repeat center center fixed;
+      background: url('Bliss.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #333;
     }
 
-    .top-bar {
+    header {
       background: linear-gradient(to right, #a8e063, #56ab2f);
+      padding: 20px 40px;
       color: white;
-      padding: 15px 40px;
-      font-size: 22px;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      border-bottom: 2px solid #ffffff88;
     }
 
-    .top-bar a {
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
       color: white;
-      text-decoration: none;
       text-shadow: 1px 1px #000;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    .top-bar a:hover {
+    nav ul li a:hover {
       text-decoration: underline;
     }
 
@@ -79,9 +89,18 @@
 </head>
 <body>
 
-  <div class="top-bar">
-    <a href="Home.html">Social Sphere</a>
-  </div>
+  <header>
+    <nav>
+      <ul>
+        <li style="font-size: 22px;"><a href="Home.html">SocialSphere</a></li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Profile.html">Profile</a></li>
+        <li><a href="Settings.html">Settings</a></li>
+        <li><a href="Mess.html">Messages</a></li>
+        <li><a href="Notification.html">Notifications</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <div class="container">
     <h1>Logout Confirmation</h1>
