@@ -1,12 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Logout Confirmation</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .top-bar {
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 40px;
+      font-size: 22px;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .top-bar a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 100px auto;
+      background: white;
+      padding: 40px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .buttons button {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .buttons button:hover {
+      background-color: #1b5e20;
+    }
+  </style>
 </head>
 <body>
+
+  <div class="top-bar">
+    <a href="Home.html">Social Sphere</a>
+  </div>
+
   <div class="container">
     <h1>Logout Confirmation</h1>
     <p>Are you sure you want to log out?</p>
@@ -18,12 +89,13 @@
 
   <script>
     function logout() {
-      window.location.href = 'index.html'; 
+      window.location.href = 'index.html'; // Log out and go to login page
     }
 
     function stay() {
-      window.location.href = 'Mainplatfrom.html'; 
+      window.location.href = 'Mainplatform.html'; // Stay on the platform
     }
   </script>
+
 </body>
 </html>
