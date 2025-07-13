@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a Post - SocialSphere</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('Bliss.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    textarea, input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Create a New Post</h2>
+    <form onsubmit="submitPost(event)">
+      <textarea id="postText" placeholder="What's on your mind?" required></textarea>
+      <input type="text" id="postImage" placeholder="Image URL (optional)" />
+      <button type="submit">Post</button>
+    </form>
+  </div>
+
+  <script>
+    function submitPost(event) {
+      event.preventDefault();
+      alert("Post submitted! (Functionality for saving/posting will go here)");
+      window.close();
+    }
+  </script>
+</body>
+</html>
