@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SocialSphere</title>
   <style>
+    @font-face {
+      font-family: 'SciFied2002';
+      src: url('/mnt/data/sci_fied_font/scifi2k2.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'SciFied2002', 'Frutiger LT Std', sans-serif;
       background: url('Bliss.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #333;
@@ -19,6 +26,7 @@
       color: white;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       border-bottom: 2px solid #ffffff88;
+      font-family: 'SciFied2002', sans-serif;
     }
 
     nav ul {
@@ -53,7 +61,8 @@
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(8px);
       padding: 20px;
-      border-radius: 20px;
+      border: 4px solid #2e7d32;
+      border-radius: 10px;
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     }
 
@@ -111,14 +120,9 @@
       text-decoration: underline;
     }
 
-    h2 {
+    h2, h3 {
       color: #388e3c;
-    }
-
-    img {
-      border-radius: 10px;
-      margin-top: 10px;
-      max-width: 100%;
+      font-family: 'SciFied2002', sans-serif;
     }
   </style>
 </head>
@@ -141,78 +145,7 @@
   <main>
     <section class="news-feed">
       <h2>News Feed</h2>
-
-      <div class="post">
-        <div class="user-info">
-          <img src="profile-pic.jpg" alt="Profile Picture">
-          <h3><a href="Profile.html" class="profile-link">Jackson</a></h3>
-        </div>
-        <p>Cute Cat</p>
-        <h6>June 12, 2025</h6>
-        <img src="Cathtmlsample.jpg" alt="Cute cat">
-        <div class="like-buttons">
-          <button class="like-button" onclick="incrementLikes('like-count-1')">Like</button>
-          <span id="like-count-1">15</span>
-        </div>
-      </div>
-
-      <div class="post">
-        <div class="user-info">
-          <img src="profile-pic.jpg" alt="Profile Picture">
-          <h3><a href="JohnProfile.html" class="profile-link">John</a></h3>
-        </div>
-        <p>might Buy this camera Next time I get the salary</p>
-        <h6>18 minutes ago</h6>
-        <img src="Sony_a7iv.webp" alt="SONY A7 IV">
-        <div class="like-buttons">
-          <button class="like-button" onclick="incrementLikes('like-count-2')">Like</button>
-          <span id="like-count-2">8</span>
-        </div>
-      </div>
-      ALDEN HAHAHAHAH.webp
-      <div class="post">
-        <div class="user-info">
-          <img src="profile-pic.jpg" alt="Profile Picture">
-          <h3><a href="JustinProfile.html" class="profile-link">Justin</a></h3>
-        </div>
-        <p>Made This Graphic Hope Yall like it</p>
-        <h6>an hour ago</h6>
-        <img src="y2k.jpg" alt="Y2K GRAPHIC">
-        <div class="like-buttons">
-          <button class="like-button" onclick="incrementLikes('like-count-2')">Like</button>
-          <span id="like-count-2">25</span>
-        </div>
-      </div>
-      
-      <div class="post">
-        <div class="user-info">
-          <img src="" alt="Profile Picture">
-          <h3><a href="JustinProfile.html" class="profile-link">Justin</a></h3>
-        </div>
-        <p>😛👆</p>
-        <h6>yesterday</h6>
-        <img src="ALDEN HAHAHAHAH.webp" alt="ALDEN RICHARCH">
-        <div class="like-buttons">
-          <button class="like-button" onclick="incrementLikes('like-count-2')">Like</button>
-          <span id="like-count-2">125</span>
-        </div>
-        
-      </div>
-      <div class="post">
-        <div class="user-info">
-          <img src="" alt="Profile Picture">
-          <h3><a href="JustinProfile.html" class="profile-link">Chris</a></h3>
-        </div>
-        <p>With You - Chris Brown</p>
-        <h6>yesterday</h6>
-        <video width="640" height="360" controls>
-  <source src="withyou.mp4" type="video/mp4">
-</video>
-        <div class="like-buttons">
-          <button class="like-button" onclick="incrementLikes('like-count-2')">Like</button>
-          <span id="like-count-2">1589</span>
-        </div>
-      </div>
+      <!-- Posts go here -->
     </section>
 
     <section class="sidebar">
