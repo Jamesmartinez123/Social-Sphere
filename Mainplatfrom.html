@@ -81,6 +81,7 @@
 
     .post {
       margin-bottom: 25px;
+      max-width: 500px;
     }
 
     .user-info {
@@ -93,6 +94,15 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
+    }
+
+    .post img.post-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      display: block;
+      margin-top: 10px;
     }
 
     .like-button {
@@ -145,15 +155,14 @@
   <main>
     <section class="news-feed">
       <h2>News Feed</h2>
-      
-     <div class="post">
+      <div class="post">
         <div class="user-info">
           <img src="profile-pic.jpg" alt="Profile Picture">
           <h3><a href="Profile.html" class="profile-link">Jackson</a></h3>
         </div>
         <p>Cute Cat</p>
         <h6>June 12, 2025</h6>
-        <img src="Cathtmlsample.jpg" alt="Cute cat">
+        <img class="post-image" src="Cathtmlsample.jpg" alt="Cute cat">
         <div class="like-buttons">
           <button class="like-button" onclick="incrementLikes('like-count-1')">Like</button>
           <span id="like-count-1">15</span>
@@ -173,7 +182,6 @@
           <span id="like-count-2">8</span>
         </div>
       </div>
-      ALDEN HAHAHAHAH.webp
       <div class="post">
         <div class="user-info">
           <img src="profile-pic.jpg" alt="Profile Picture">
@@ -217,7 +225,6 @@
           <span id="like-count-2">1589</span>
         </div>
       </div>
-    </section>
 
     </section>
 
